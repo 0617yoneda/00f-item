@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     patch 'customers/password' => 'customers/registrations#update', as: 'update_customer_password'
     get 'customers/password/new' => 'customers/passwords#new', as: 'new_customer_password'
     post 'customers/password' => 'customers/passwords#create', as: 'create_customer_password'
+    post 'customers/guest_sign_in', to: 'customers/sessions#new_guest'
   end
 
   root "homes#top"
